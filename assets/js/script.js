@@ -28,19 +28,18 @@ document.getElementById("explosion").onclick = (e) => {
 
     function startTimer() {
 
-        var countdownTimer = setInterval(function() {
+        var countdownTimer = setInterval(function () {
 
-        console.log(i);
-        i = i - 1;
+            console.log(i);
+            i = i - 1;
 
-        if (i <= 0) {
-            clearInterval(countdownTimer);
-        }
-    }, 1000);
-}
+            if (i <= 0) {
+                clearInterval(countdownTimer);
+                console.log("BOOM")
+            }
+        }, 1000);
+    }
 
-startTimer(); 
-    console.log("BOOM");
-
+    startTimer();
 };
 
