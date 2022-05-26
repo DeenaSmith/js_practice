@@ -17,9 +17,30 @@ document.getElementById("first").onclick = (e) => {
         } else {
             console.log(i)
         };
-       // console.log(i);
     };
 
 };
 
+
+// Self-Destruct Button
+document.getElementById("explosion").onclick = (e) => {
+    var i = 5;
+
+    function startTimer() {
+
+        var countdownTimer = setInterval(function() {
+
+        console.log(i);
+        i = i - 1;
+
+        if (i <= 0) {
+            clearInterval(countdownTimer);
+        }
+    }, 1000);
+}
+
+startTimer(); 
+    console.log("BOOM");
+
+};
 
