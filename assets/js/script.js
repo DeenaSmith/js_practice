@@ -2,19 +2,24 @@
 
 let count = 0
 
+// FIZZ BUZZ Button
 document.getElementById("first").onclick = (e) => {
     //count += 1;
     //console.log("test", count);
 
     for (var i = 1; i <= 100; i++) {
-        if (i % 3 === 0) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzbuzz", i)
+        } else if (i % 3 === 0) {
             console.log("fizz", i);
         } else if (i % 5 === 0) {
             console.log("buzz", i)
-        } else if (i % 3 ===0 && i % 5 ===0) {
-            console.log("fizzbuzz")
-        }
+        } else {
+            console.log(i)
+        };
        // console.log(i);
     };
 
 };
+
+
