@@ -56,9 +56,9 @@ function plusMinus(arr) {
     var negative = 0;
     var zero = 0
 
-    for (var i=0; i < n; i++) {
+    for (var i = 0; i < n; i++) {
         if (arr[i] > 0) {
-        positive += 1;
+            positive += 1;
         } else if (arr[i] < 0) {
             negative += 1;
         } else {
@@ -77,3 +77,24 @@ function plusMinus(arr) {
 
 plusMinus(arr);
 
+
+// Race day if/else based on variables 
+
+let raceNumber = Math.floor(Math.random() * 1000);
+let regEarly = true;
+let runnerAge = 18;
+
+if (runnerAge > 18 && regEarly === true) {
+    console.log(raceNumber += 1000)
+}
+
+if (regEarly === true && runnerAge > 18) {
+    raceNumber += 1000
+    console.log('Your race starts at 9:30am ' + raceNumber)
+} else if (regEarly === false && runnerAge > 18) {
+    console.log('Your race starts at 11:00am ' + raceNumber)
+} else if (runnerAge < 18) {
+    console.log('Youth registrants run at 12:30 pm (regardless of registration).')
+} else if (runnerAge === 18) {
+    console.log('See registration desk.')
+}
