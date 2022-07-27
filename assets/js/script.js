@@ -98,3 +98,72 @@ if (regEarly === true && runnerAge > 18) {
 } else if (runnerAge === 18) {
     console.log('See registration desk.')
 }
+
+
+
+
+//Rock, paper, scissors game
+const getUserChoice = userInput => {
+    userInput = userInput.toLowerCase();
+
+    if (userInput === 'rock' || userInput === 'scissors' || userInput === 'paper') {
+        return userInput
+    } else {
+        console.log("Error, please enter a valid response.")
+    }
+}
+
+
+const getComputerChoice = () => {
+    let randomNumber = Math.floor(Math.random() * 3)
+
+    switch (randomNumber) {
+        case 0: return "rock";
+        case 1: return "paper";
+        case 2: return "scissors";
+    }
+};
+
+
+const determineWinner = (userChoice, computerChoice) => {
+    if( userChoice === computerChoice) {
+        return 'The players have tied.'
+    }
+    if(userChoice === 'rock') {
+        if(computerChoice === 'paper') {
+            return 'The computer has won with paper!'
+        } else {
+            return 'You are the winner!'
+        }
+    }
+
+    if(userChoice === 'paper') {
+        if(computerChoice === 'scissors') {
+            return 'The computer has won with scissors!'
+        } else {
+            return 'You are the winner!'
+        }
+    }
+
+    if(userChoice === 'scissors') {
+        if(computerChoice === 'rock') {
+            return 'The computer has won with a rock!'
+        } else {
+            return 'You are the winner!'
+        }
+    }
+};
+
+
+const playGame = () => {
+    const userChoice = getUserChoice('paper');
+    const computerChoice = getComputerChoice();
+
+    console.log(`You threw: ${userChoice}`);
+    console.log(`The computer threw: ${computerChoice}`)
+
+    console.log(determineWinner(userChoice, computerChoice))
+};
+
+
+playGame();
