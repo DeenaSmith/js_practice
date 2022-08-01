@@ -126,27 +126,27 @@ const getComputerChoice = () => {
 
 
 const determineWinner = (userChoice, computerChoice) => {
-    if( userChoice === computerChoice) {
+    if (userChoice === computerChoice) {
         return 'The players have tied.'
     }
-    if(userChoice === 'rock') {
-        if(computerChoice === 'paper') {
+    if (userChoice === 'rock') {
+        if (computerChoice === 'paper') {
             return 'The computer has won with paper!'
         } else {
             return 'You are the winner!'
         }
     }
 
-    if(userChoice === 'paper') {
-        if(computerChoice === 'scissors') {
+    if (userChoice === 'paper') {
+        if (computerChoice === 'scissors') {
             return 'The computer has won with scissors!'
         } else {
             return 'You are the winner!'
         }
     }
 
-    if(userChoice === 'scissors') {
-        if(computerChoice === 'rock') {
+    if (userChoice === 'scissors') {
+        if (computerChoice === 'rock') {
             return 'The computer has won with a rock!'
         } else {
             return 'You are the winner!'
@@ -167,3 +167,65 @@ const playGame = () => {
 
 
 playGame();
+
+
+
+
+// Sleep tracker
+const getSleepHours = day => {
+    if (day === 'monday') {
+        return 8
+    } else if (day === 'tuesday') {
+        return 7
+    } else if (day === 'wednesday') {
+        return 8
+    } else if (day === 'thursday') {
+        return 5
+    } else if (day === 'friday') {
+        return 8
+    } else if (day === 'saturday') {
+        return 7
+    } else if (day === 'sunday') {
+        return 8
+    } else {
+        return "Error!"
+    };
+
+};
+
+
+const getActualSleepHours = () => 
+
+    getSleepHours('monday') + 
+    getSleepHours('tuesday') +
+    getSleepHours('wednesday') +
+    getSleepHours('thursday') +
+    getSleepHours('friday') +
+    getSleepHours('saturday') +
+    getSleepHours('sunday') 
+
+
+const getIdealSleepHours = () => {
+    let idealHours = 8;
+    return idealHours * 7;
+};
+
+
+const calculateSleepDebt = () => {
+    const actualSleepHours = getActualSleepHours();
+    const idealSleepHours = getIdealSleepHours();
+
+    if(actualSleepHours === idealSleepHours) {
+        console.log("You got " + actualSleepHours + " hours of sleep this week. You're right on track!")
+    } else if(actualSleepHours > idealSleepHours) {
+        console.log("You got " + (idealSleepHours - actualSleepHours) + " more hours of sleep than you needed this week.")
+    } else if(actualSleepHours < idealSleepHours) {
+        console.log("You got " + (idealSleepHours - actualSleepHours) + " hours of sleep less than you needed this week. Get some rest!")
+    } else {
+        console.log('Oops! Something went wrong, check your code.')
+    }
+};
+
+calculateSleepDebt();
+
+
