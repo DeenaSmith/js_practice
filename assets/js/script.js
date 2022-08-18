@@ -306,3 +306,32 @@ secretMessage.splice(6, 5, 'know');
 //console.log(secretMessage)
 
 console.log(secretMessage.join(' '))
+
+
+
+
+// Whale Speak Converter
+const input = 'Whales rock and should rule the Earth.'
+const vowels = ['a', 'e', 'i', 'o', 'u']
+const resultArray = [];
+
+for (let i = 0; i < input.length; i++) {
+    //console.log(`inputIndex is ${i}.`)
+    if (input[i] === 'e') {
+        resultArray.push(input[i]);
+    }
+    if (input[i] === 'u') {
+        resultArray.push(input[i]);
+    }
+
+    for(let v = 0; v < vowels.length; v++) {
+        //console.log(`vowelIndex is ${v}.`)
+        if (input[i] === vowels[v])
+        //console.log(input[i])
+        resultArray.push(input[i])
+    }
+}
+
+//console.log(resultArray);
+const resultString = resultArray.join('').toUpperCase();
+console.log(resultString);
