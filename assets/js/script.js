@@ -324,14 +324,52 @@ for (let i = 0; i < input.length; i++) {
         resultArray.push(input[i]);
     }
 
-    for(let v = 0; v < vowels.length; v++) {
+    for (let v = 0; v < vowels.length; v++) {
         //console.log(`vowelIndex is ${v}.`)
         if (input[i] === vowels[v])
-        //console.log(input[i])
-        resultArray.push(input[i])
+            //console.log(input[i])
+            resultArray.push(input[i])
     }
 }
 
 //console.log(resultArray);
 const resultString = resultArray.join('').toUpperCase();
 console.log(resultString);
+
+
+
+
+
+const addTwo = num => {
+    return num + 2;
+}
+
+const checkConsistentOutput = (func, val) => {
+    console
+    let checkA = val + 2;
+    let checkB = func(val);
+    return checkA === checkB ? func(val) : 'inconsistent results';
+}
+
+checkConsistentOutput(addTwo, 10);
+
+
+
+
+// Reversing numbers
+function reverseNum(num) {
+
+    let numToStr = '' + num
+    console.log(numToStr)
+
+    let numStrSplit = numToStr.split('')
+    console.log(numStrSplit)
+
+    let splitNumReverse = numStrSplit.reverse()
+    console.log(splitNumReverse)
+
+    let reverseNum = splitNumReverse.join('')
+    console.log(reverseNum)
+}
+
+reverseNum(12345);
