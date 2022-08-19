@@ -373,3 +373,31 @@ function reverseNum(num) {
 }
 
 reverseNum(12345);
+
+
+
+
+// Checks if input is a palindrome
+function checkPal(str) {
+    // console.log('')
+    // console.log(str)
+
+    let toArr = str.split('');
+    // console.log(toArr);
+
+    let revArr = toArr.reverse();
+    //console.log(revArr);
+
+    let revWord = revArr.join('');
+    //console.log(revWord);
+
+    if (str === revWord) {
+        console.log("Yep, this is a palindrome.")
+    }
+
+    if (str !== revWord) {
+        console.log("No, idiot. This isn't a palindrome.")
+    }
+}
+
+checkPal('poohbigp')
