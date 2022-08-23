@@ -448,3 +448,22 @@ storyWords.forEach((word) => {
 
 //console.log(storyWords)
 console.log(storyWords.join(' '))
+
+
+
+
+//Sorts a word alphabetically
+function alphabetize(word) {
+    console.log(word)
+
+    let array = word.split('')
+    console.log(array)
+
+    let sorted = array.sort()
+    console.log(sorted)
+
+    let final = sorted.join('')
+    console.log(final)
+}
+
+alphabetize('shelbyisaboob')
