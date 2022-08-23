@@ -467,3 +467,17 @@ function alphabetize(word) {
 }
 
 alphabetize('shelbyisaboob')
+
+
+
+
+//First letter in a phrase to caps
+function capFirstLetter(words) {
+    var separateWord = words.toLowerCase().split(' ');
+    for (var i = 0; i < separateWord.length; i++) {
+        separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
+            separateWord[i].substring(1);
+    }
+    return separateWord.join(' ');
+}
+console.log(capFirstLetter('this is basic coding practice'));
